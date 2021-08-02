@@ -26,10 +26,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun setActionBarTitle(title:String){
-        var actionBar = getSupportActionBar()
-        if(actionBar != null){
-            actionBar.setTitle(title)
-        }
-    }
 }

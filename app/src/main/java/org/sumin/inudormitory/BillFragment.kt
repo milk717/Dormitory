@@ -31,13 +31,6 @@ class BillFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_bill, container, false)
     }
 
-    override fun onResume() {
-        super.onResume()
-        val activity = MainActivity()
-        if(activity != null){
-            activity.setActionBarTitle("공공요금 조회")
-        }
-    }
     companion object {
         /**
          * Use this factory method to create a new instance of
