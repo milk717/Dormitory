@@ -31,6 +31,12 @@ class BillFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_bill, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        val mainActivity = requireActivity() as MainActivity
+        mainActivity.setToolbarTitle("공공요금")
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

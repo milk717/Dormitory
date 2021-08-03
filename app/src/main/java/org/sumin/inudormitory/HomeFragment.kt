@@ -37,6 +37,12 @@ class HomeFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        val mainActivity = requireActivity() as MainActivity
+        mainActivity.setToolbarTitle("홈화면")
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

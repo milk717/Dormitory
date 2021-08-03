@@ -37,6 +37,12 @@ class DemeritFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_demerit, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        val mainActivity = requireActivity() as MainActivity
+        mainActivity.setToolbarTitle("벌점조회")
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

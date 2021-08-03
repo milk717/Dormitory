@@ -37,6 +37,12 @@ class ListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_list, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        val mainActivity = requireActivity() as MainActivity
+        mainActivity.setToolbarTitle("더보기")
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of
