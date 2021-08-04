@@ -14,12 +14,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val fragmentList = listOf(HomeFragment(),DemeritFragment(),BillFragment(),ListFragment())       //프래그먼트 목록 생성
+        val fragmentList = listOf(HomeFragment(),DemeritFragment(),BillFragment())       //프래그먼트 목록 생성
         val adapter = FragmentAdapter(this)         //어댑터 생성
         adapter.fragmentList = fragmentList     //어댑터에 프래그먼트 목록 저장
         binding.viewpager.adapter = adapter     //뷰페이저 불러오고 어댑터 적용
 
-        val tabTitle = listOf<String>("디폴트","벌점","공공요금","더보기")      //디자인 끝나면 아이콘으로 바꾸기
+        val tabTitle = listOf<String>("디폴트","벌점","공공요금")      //디자인 끝나면 아이콘으로 바꾸기
         TabLayoutMediator(binding.tabs,binding.viewpager){tab,position->
             tab.text=tabTitle[position]
         }.attach()
