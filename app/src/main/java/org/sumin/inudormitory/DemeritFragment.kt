@@ -40,7 +40,7 @@ class DemeritFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         val mainActivity = requireActivity() as MainActivity
-        mainActivity.setToolbarTitle("벌점조회")
+        mainActivity.setToolbarTitle("상·벌점조회")
     }
 
     companion object {

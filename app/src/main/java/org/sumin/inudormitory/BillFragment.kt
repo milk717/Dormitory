@@ -34,7 +34,7 @@ class BillFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         val mainActivity = requireActivity() as MainActivity
-        mainActivity.setToolbarTitle("공공요금")
+        mainActivity.setToolbarTitle("공공요금 조회")
     }
 
     companion object {

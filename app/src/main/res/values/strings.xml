@@ -2,4 +2,7 @@
     <string name="app_name">INU dormitory</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_logo">INU logo</string>
+    <string name="logout">app logout</string>
+    <string name="title">인천대학교 기숙사</string>
 </resources>

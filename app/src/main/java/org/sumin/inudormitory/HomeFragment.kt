@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         val mainActivity = requireActivity() as MainActivity
-        mainActivity.setToolbarTitle("홈화면")
+        mainActivity.setToolbarTitle("인천대학교 기숙사")
     }
 
     companion object {

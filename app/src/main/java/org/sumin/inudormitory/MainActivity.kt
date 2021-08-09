@@ -2,6 +2,7 @@ package org.sumin.inudormitory
 
 import android.os.Bundle
 import android.util.DisplayMetrics
+import android.widget.TextView
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
@@ -27,13 +28,12 @@ class MainActivity : AppCompatActivity() {
             tab.text=tabTitle[position]
         }.attach()
 
-        setSupportActionBar(binding.toolbar)    //툴바 설정해줌
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)    //툴바 설정해줌
     }
 
     fun setToolbarTitle(title: String){
-        var actionBar:ActionBar? = supportActionBar
-        if(actionBar != null){
-            actionBar.setTitle(title)
-        }
+        var toolbarTitle = findViewById<TextView>(R.id.toolbar_title)
+        toolbarTitle.setText(title)
     }
 }
