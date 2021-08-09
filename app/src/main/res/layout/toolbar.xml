@@ -4,12 +4,15 @@
     android:id="@+id/toolbar_design"
     android:layout_width="match_parent"
     android:layout_height="53dp"
-    app:contentInsetStart="0dp">
+    app:contentInsetStart="0dp"
+    android:background="@color/white"
+    android:elevation="10dp"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:elevation="10dp">
+        >
         <ImageView
             android:id="@+id/toolbar_logo"
             android:layout_width="49dp"
