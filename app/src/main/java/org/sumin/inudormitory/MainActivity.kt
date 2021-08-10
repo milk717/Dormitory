@@ -23,10 +23,7 @@ class MainActivity : AppCompatActivity() {
         adapter.fragmentList = fragmentList     //어댑터에 프래그먼트 목록 저장
         binding.viewpager.adapter = adapter     //뷰페이저 불러오고 어댑터 적용
 
-        val tabTitle = listOf<String>("디폴트", "벌점", "공공요금")      //디자인 끝나면 아이콘으로 바꾸기
-        TabLayoutMediator(binding.tabs, binding.viewpager){ tab, position->
-            tab.text=tabTitle[position]
-        }.attach()
+
 
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)    //툴바 설정해줌
