@@ -4,19 +4,19 @@
     app:cnb_unselectedColor="@color/white">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/menu_home"
         android:icon="@drawable/home_default"
         android:title="홈"
         app:cnb_iconColor="@color/main"/>
 
     <item
-        android:id="@+id/bill"
+        android:id="@+id/menu_bill"
         android:icon="@drawable/bill_default"
         android:title="공공요금"
         app:cnb_iconColor="@color/main"/>
 
     <item
-        android:id="@+id/demerits"
+        android:id="@+id/menu_demerits"
         android:icon="@drawable/demerits_default"
         android:title="상·벌점조회"
         app:cnb_iconColor="@color/main"/>

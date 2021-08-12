@@ -2,10 +2,13 @@ package org.sumin.inudormitory
 
 import android.os.Bundle
 import android.util.DisplayMetrics
+import android.util.Log
+import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayoutMediator
 import org.sumin.inudormitory.databinding.ActivityMainBinding
 
@@ -14,19 +17,38 @@ class MainActivity : AppCompatActivity() {
 
     val binding by lazy{ActivityMainBinding.inflate(layoutInflater)}
 
+    private lateinit var homeFragment: HomeFragment
+    private lateinit var demeritFragment: DemeritFragment
+    private lateinit var billFragment: BillFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val fragmentList = listOf(HomeFragment(), DemeritFragment(), BillFragment())       //프래그먼트 목록 생성
-        val adapter = FragmentAdapter(this)         //어댑터 생성
-        adapter.fragmentList = fragmentList     //어댑터에 프래그먼트 목록 저장
-        binding.viewpager.adapter = adapter     //뷰페이저 불러오고 어댑터 적용
-
-
-
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)    //툴바 설정해줌
+
+
+        binding.bottomNavigation.setOnItemSelectedListener { id->
+            when(id){
+                R.id.menu_home->{
+                    Log.d("메인엑티비티","homeFragment")
+                    homeFragment = HomeFragment.newInstance()
+                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout,homeFragment).commit()
+                }
+                R.id.menu_demerits->{
+                    Log.d("메인엑티비티","demeritsFragment")
+                    billFragment = BillFragment.newInstance()
+                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout,billFragment).commit()
+                }
+                R.id.menu_bill->{
+                    Log.d("메인엑티비티","billFragment")
+                    demeritFragment = DemeritFragment.newInstance()
+                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout,demeritFragment).commit()
+                }
+            }
+        }
+
     }
 
     fun setToolbarTitle(title: String){

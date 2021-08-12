@@ -1,6 +1,8 @@
 package org.sumin.inudormitory
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,24 +12,24 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class BillFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+    //메모리에 올라갔을때
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        Log.d("tag","BillFragment onCreate")
     }
 
+    //엑티비티에 붙었을때
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        Log.d("tag","BillFragment onAttach")
+    }
+
+    //프래그먼트와 레이아웃을 연결시켜주는 부분
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bill, container, false)
     }
 
@@ -38,22 +40,8 @@ class BillFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment BillFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            BillFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        fun newInstance():BillFragment{
+            return BillFragment()
+        }
     }
 }
