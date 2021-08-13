@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)    //툴바 설정해줌
 
+        //첫 로그인시 홈화면이 선택되도록
+        homeFragment = HomeFragment.newInstance()
+        supportFragmentManager.beginTransaction().add(R.id.frame_layout,homeFragment).commit()
 
         binding.bottomNavigation.setOnItemSelectedListener { id->
             when(id){
@@ -36,13 +39,13 @@ class MainActivity : AppCompatActivity() {
                     homeFragment = HomeFragment.newInstance()
                     supportFragmentManager.beginTransaction().replace(R.id.frame_layout,homeFragment).commit()
                 }
-                R.id.menu_demerits->{
-                    Log.d("메인엑티비티","demeritsFragment")
+                R.id.menu_bill->{
+                    Log.d("메인엑티비티","billFragment")
                     billFragment = BillFragment.newInstance()
                     supportFragmentManager.beginTransaction().replace(R.id.frame_layout,billFragment).commit()
                 }
-                R.id.menu_bill->{
-                    Log.d("메인엑티비티","billFragment")
+                R.id.menu_demerits->{
+                    Log.d("메인엑티비티","demeritsFragment")
                     demeritFragment = DemeritFragment.newInstance()
                     supportFragmentManager.beginTransaction().replace(R.id.frame_layout,demeritFragment).commit()
                 }
