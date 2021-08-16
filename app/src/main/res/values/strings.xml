@@ -7,11 +7,4 @@
     <string name="title">인천대학교 기숙사</string>
     <string name="office">인천대학교 생활원 통합 행정실</string>
     <string name="number">032-835-9810</string>
-    <string name="title_activity_store">StoreActivity</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
-    <string name="title_activity_demerits">DemeritsActivity</string>
 </resources>
