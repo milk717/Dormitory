@@ -8,6 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+
 class BillFragment : Fragment() {
     //메모리에 올라갔을때
     override fun onCreate(savedInstanceState: Bundle?) {
