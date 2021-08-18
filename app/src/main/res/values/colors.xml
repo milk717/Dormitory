@@ -6,6 +6,12 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="black25">#40000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main">#034A9A</color>
+    <color name="main50">#80034A9A</color>
+    <color name="transparent">#00034A9A</color>
+    <color name="main30">#4D034A9A</color>
+    <color name="third">#E7331B</color>
+    <color name="third30">#4DE7331B</color>
 </resources>

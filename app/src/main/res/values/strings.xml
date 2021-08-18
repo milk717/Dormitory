@@ -5,4 +5,12 @@
     <string name="app_logo">INU logo</string>
     <string name="logout">app logout</string>
     <string name="title">인천대학교 기숙사</string>
+    <string name="office">인천대학교 생활원 통합 행정실</string>
+    <string name="number">032-835-9810</string>
+    <string name="title_activity_store">StoreActivity</string>
+    <string name="store">상점 기준</string>
+    <string name="plus">상점</string>
+    <string name="demerit">벌점 기준</string>
+    <string name="minus">벌점</string>
+    <string name="content">내용</string>
 </resources>
