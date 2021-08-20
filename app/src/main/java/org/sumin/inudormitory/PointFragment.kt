@@ -10,17 +10,11 @@ import android.view.ViewGroup
 import org.sumin.inudormitory.databinding.FragmentPointBinding
 
 class PointFragment : Fragment() {
-    private val pointBinding by lazy{ FragmentPointBinding.inflate(layoutInflater)}
+    lateinit var pointBinding:FragmentPointBinding
     //메모리에 올라갔을때
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("tag","DemeritFragment onCreate")
-    }
-
-    //엑티비티에 붙었을때
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Log.d("tag","DemeritFragment onAttach")
     }
 
     //프래그먼트와 레이아웃을 연결시켜주는 부분
@@ -29,36 +23,30 @@ class PointFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_point, container, false)
-        setButtonClickEvent()
+        pointBinding = FragmentPointBinding.inflate(inflater,container,false)
+        return pointBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        pointBinding.plusListButton.setOnClickListener {
+            Log.d("버튼클릭","상점리스트")
+        }
+        pointBinding.minusListButton.setOnClickListener {
+            Log.d("버튼클릭","벌점리스트")
+        }
     }
 
     override fun onResume() {
         super.onResume()
         val mainActivity = requireActivity() as MainActivity
         mainActivity.setToolbarTitle("상·벌점조회")
-
+        
     }
 
     companion object {
         fun newInstance():PointFragment{
             return PointFragment()
-        }
-    }
-
-    private fun setButtonClickEvent(){
-        pointBinding.plusListButton.setOnClickListener{onClick(pointBinding.plusListButton)}
-        pointBinding.minusListButton.setOnClickListener{onClick(pointBinding.minusListButton)}
-    }
-
-    private fun onClick(view:View)=View.OnClickListener {
-        when(view){
-            pointBinding.plusListButton->{
-                Log.d("버튼클릭","상점리스트")
-            }
-            pointBinding.minusListButton->{
-                Log.d("버튼클릭","벌점리스트")
-            }
         }
     }
 

@@ -4,13 +4,41 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_logo">INU logo</string>
     <string name="logout">app logout</string>
+    
+    <string name="name">이름</string>
+    <string name="department">학과(부)</string>
+    <string name="ID">학번</string>
+    <string name="room">방</string>
+    <string name="D_ID">사생번호</string>
+    <string name="S_department">정보기술대학 컴퓨터공학부</string>
+    <string name="S_ID">202012345</string>
+    <string name="S_room">0기숙사 0동 000호</string>
+    <string name="S_D_ID">000000</string>
+    
+    <string name="notice">공지사항</string>
+
     <string name="title">인천대학교 기숙사</string>
     <string name="office">인천대학교 생활원 통합 행정실</string>
     <string name="number">032-835-9810</string>
+
+    <string name="refund_title">환불받을 금액</string>
+    <string name="using_title">총 사용금액(VAT포함)</string>
+    <string name="refund_money">160,000원</string>
+    <string name="using_money">0원</string>
+    
+    <string name="date">날짜</string>
+    <string name="point_title">상벌점명</string>
+    <string name="point">상벌점</string>
+    <string name="total">합계</string>
+    <string name="point_detail">사유</string>
+    <string name="sign">+/-</string>
+    
     <string name="title_activity_store">StoreActivity</string>
     <string name="store">상점 기준</string>
     <string name="plus">상점</string>
     <string name="demerit">벌점 기준</string>
     <string name="minus">벌점</string>
     <string name="content">내용</string>
+    
+    
 </resources>

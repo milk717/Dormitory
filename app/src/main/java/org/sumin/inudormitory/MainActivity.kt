@@ -7,12 +7,13 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import org.sumin.inudormitory.databinding.ActivityMainBinding
+import org.sumin.inudormitory.databinding.FragmentPointBinding
 
 
 class MainActivity : AppCompatActivity() {
 
-    val binding by lazy{ActivityMainBinding.inflate(layoutInflater)}
-
+    private val binding by lazy{ActivityMainBinding.inflate(layoutInflater)}
+    private val pointBinding by lazy{ FragmentPointBinding.inflate(layoutInflater)}
 
     private lateinit var homeFragment: HomeFragment
     private lateinit var pointFragment: PointFragment
@@ -54,6 +55,10 @@ class MainActivity : AppCompatActivity() {
 
         //벌점리스트, 상점리스트 액티비티 재활용
 
+        pointBinding.plusListButton.setOnClickListener {
+
+            Log.d("버튼클릭","상점리스트")
+        }
     }
 
 
